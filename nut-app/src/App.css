@@ -1,0 +1,532 @@
+
+html{
+  font-family: 'Quicksand', sans-serif;
+  background-color: white !important;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif !important;
+  background-color: white !important;
+}
+
+/*
+main {
+  z-index: 100;
+}
+*/
+
+.sectionBody {
+  position: relative;
+  height: 100%;
+  /*box-shadow: rgba(0, 0, 0, 0.349) 4px 4px 4px;*/
+  margin-right: 40px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-right: -100px;
+  margin-top:43px;
+}
+
+nav a {
+  display: block;
+  font-family: 'Helvetica', sans-serif;
+  margin: 0px;
+  width: 94%;
+  position: relative;
+  left: 3%;
+  height: 50px;
+  /*box-shadow: rgba(0, 0, 0, 0.349) 3px 3px 4px;*/
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 0px 20px 0px;
+  text-decoration: none !important;
+  color: white;
+  margin-bottom: 10px;
+  z-index: 1;
+  background-color: #05386B !important;
+  background-position: center;
+  transition: background 0.8s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #05386B;
+  border-left: 4px solid #05386B;
+  background: #f7f7f7 !important;
+  border-right: none;
+  left: 6.3%;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.navbar__link--active {
+  color: #05386B;
+  border-left: 4px solid #05386B;
+  border-right: none;
+  left: 6.3%;
+  z-index: 1;
+  transition: background 0s;
+  transition-timing-function: ease-out;
+  background: #f7f7f7 !important;
+  background-color: #6eb9f7;
+  background-size: 100%;
+}
+
+.navTitle{
+  padding-top: 11px;
+}
+
+.homeBg {
+  background-color:white;
+}
+
+.ingredientsBg {
+  background-color:white;
+}
+
+.mealsBg {
+  background-color:white;
+}
+
+.dashboardBg {
+  background-color:white;
+}
+
+.tabBg {
+  margin-right:12px;
+  background-color:white;
+}
+
+table {
+  margin: 4px;
+  border-collapse: collapse;
+}
+
+tr {
+  box-shadow: rgba(0, 0, 0, 0.349) 3px 4px 4px;
+}
+
+tr:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(228, 228, 228);
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: rgb(181, 181, 255);
+}
+
+td{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 0px;
+
+}
+
+th {
+  padding-left: 10px;
+  padding-right: 18px;
+  padding-top: 2px;
+  background-color:#05386B;
+  color: white;
+}
+
+th > .fc-scrollgrid-sync-inner{
+  background-color:#05386B;
+  text-decoration: none;
+}
+
+th > .fc-scrollgrid-sync-inner> a{
+  color: white !important;
+}
+
+
+th:first-child {
+  border-top-left-radius: 8px;
+}
+
+th:last-child {
+  border-top-right-radius: 8px;
+}
+
+#selectionData {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.349) 3px 4px 4px;
+}
+
+.insetButton {
+  text-align: center;
+  background-color:#0d5964;
+  border-radius:4px;
+  border:1px solid #0d5964;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:13px;
+  font-weight:bold;
+  padding:1px 6px;
+  margin: 1px;
+  text-decoration:none;
+}
+.insetButton:hover {
+  transition: 0.5s;
+  transition-timing-function: ease-out;
+  color:#05386B;
+  background-color:#f7f7f7;
+}
+.insetButton:active {
+  position:relative;
+  top:1px;
+}
+
+.removeButton {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  float:left;
+}
+
+.roundedEntry {
+  border-radius: 7px;
+  padding: 3px;
+  border-style: solid;
+  border-width: 1px;
+  width: 220px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#page {
+  display: grid;
+  width: 100%;
+  height: 350px;
+  grid-template-areas: "head head"
+                       "nav main"
+                       "nav foot";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 150px 1fr;
+}
+
+nav {
+  grid-area: nav;
+  margin-top: 10px;
+  /*background-color: #63B995;*/
+  /*background:linear-gradient(to bottom, #355834 5%, #63B995 90%);*/
+}
+
+main {
+  grid-area: main;
+}
+
+header {
+  grid-area: head;
+  background-color: #05386B;
+  /*background-color: #2d6139;*/
+}
+
+footer {
+  grid-area: foot;
+  margin-top: 50px;
+  font-size: 10px;
+  /*background-color: #63B995;*/
+}
+
+header .siteName {
+  font-size: 41px;
+  height: 100px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  float:left;
+  text-align: center;
+  vertical-align: text-top;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+
+header .accountBar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 16px;
+  border-radius: 17px;
+  margin: 3px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.349) 3px 4px 4px;
+}
+
+h1 {
+  font-size: 50px !important;
+  margin: 0px;
+  margin-bottom: 40px !important;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.fc .fc-toolbar-title{
+  font-size: 50px !important;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#mealStats {
+  font-size: 20px;
+  padding: 6px;
+  background-color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.349) 3px 4px 4px;
+}
+
+#mealStats span {
+  font-size: 14px;
+  margin: 0px;
+  margin: 4px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.totalStat {
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hiddenOnLoad {
+  display: none;
+}
+
+.suggestText {
+  color: grey;
+  font-style: italic;
+}
+
+#navPane {
+  font-size: 15px;
+  margin: 7px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.349) 3px 4px 4px;
+}
+
+#navPane p {
+  margin: 0px;
+}
+
+.dualColumn {
+  float: left;
+  width: calc(50% - 75px);
+}
+
+.colLeft {
+  float: left;
+  width: calc(50% - 75px);
+}
+
+.colRight {
+  float: right;
+  width: calc(50% - 75px);
+  margin-left: 140px;
+  margin-top: 48px;
+}
+
+#addMealChart{
+  margin-top:50px;
+}
+
+#addMealChart > .colLeft{
+  margin-left: -195px;
+  width: 700px !important; 
+  height: 350px !important;
+}
+
+#addMealChart > .colRight{
+  margin-top: 0px;
+}
+
+#addMealChart td{
+  text-align: left !important;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*  background-image: url("./img/foodie.jpeg");*/
+
+#mealList td, #mealList th{
+  text-align: center;
+}
+
+#mealTable th{ 
+  padding-left:18px;
+  padding-bottom:2px;
+  text-align: center;
+}
+
+#mealTable{
+  margin-right: 10px;
+  margin-top: -4px;
+}
+
+#mealButton{
+  padding-left:10px;
+}
+
+#mealAdded{
+  text-align: center;
+  padding-right: 40px;
+}
+
+.btn {
+	color: #454545;
+	background: white;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #454545;
+	position: relative;
+	margin: 1em;
+	display: inline-block;
+	padding: 0.5em 1em;
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+	font-weight: bold;
+}
+
+.btn:before, .btn:after {
+	content: '';
+	display: block;
+	position: absolute;
+	border-color: #454545;
+	box-sizing: border-box;
+	border-style: solid;
+	width: 1em;
+	height: 1em;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:before {
+	top: -6px;
+	left: -6px;
+	border-width: 2px 0 0 2px;
+	z-index: 5;
+}
+
+.btn:after {
+	bottom: -6px;
+	right: -6px;
+	border-width: 0 2px 2px 0;
+}
+
+.btn:hover:before, .btn:hover:after {
+	width: calc(100% + 12px);
+	height: calc(100% + 12px);
+	border-color: #fff;
+}
+
+.btn:hover {
+	color: #353535;
+	background-color: #fff;
+	border-color: #fff;
+}
+
+.panel {
+	max-width: 960px;
+	text-align: center;
+	position: relative;
+	margin: auto;
+}
+
+.btncolor .btn {
+	color: #05386B;
+	border-color: #05386B;
+}
+
+.btncolor .btn:before, .btncolor .btn:after {
+	border-color: #05386B;
+}
+
+.btncolor .btn:hover:before, .btncolor .btn:hover:after {
+	border-color: #05386B;
+}
+
+.btncolor .btn:hover {
+	color: #fff;
+	background-color: #05386B;
+	border-color: #05386B;
+}
+
+.btncolor .panel {
+	max-width: 960px;
+	text-align: center;
+	position: relative;
+	margin: auto;
+}
+
+.btn-block{
+  width:75% !important;
+}
+
+.chartjs-render-monitor{
+  width: 700px; 
+  height: 350px;
+}
+
+form{
+  text-align: center
+}
+
+h3{
+  color: #6eb9f7 !important;
+  font-size: 18px !important;
+  display:inline;
+  word-wrap: break-word;
+ }
+
+ h2{
+  font-size: 25px !important;
+  font-weight: 700 !important;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif; 
+}
+
+ .iAteSubmit{
+   margin-left: 10px;
+ }
+
+ p{
+  font-size: 18px !important;
+  text-align: center;
+  padding-bottom: 10px;
+ }
+
+ .addMealsForm label {
+   font-size: 22px;
+ }
