@@ -149,7 +149,7 @@ export default function BasicExample() {
       <section id="page">
 
         <header>
-          <div className="siteName">🍎Nutrition Site</div>
+          <div className="siteName">🍎MyDailyNutrients</div>
           <div className="accountBar"><AuthenticationClass /></div>
         </header>
         <nav id="nav">
